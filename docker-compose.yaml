@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+
+  db:
+    image: mongo:latest
+    volumes:
+      - ./docker-compose-volume/data/db:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - cofre
+
+#  web:
+#    build: ./app
+#    environment:
+#      - WAIT_COMMAND=1
+#    ports:
+#      - "3000:3000"
+#    networks:
+#      - elk
+#    depends_on:
+#      - db
+
+
+networks:
+  cofre:
+    driver: bridge
