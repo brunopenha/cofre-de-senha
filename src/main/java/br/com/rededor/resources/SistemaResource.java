@@ -39,7 +39,7 @@ public class SistemaResource {
     }
 
     @DELETE
-    @Path("deleta")
+    @Path("deletar")
     public void deletar(
             @QueryParam("idParam") String idParam
     ){

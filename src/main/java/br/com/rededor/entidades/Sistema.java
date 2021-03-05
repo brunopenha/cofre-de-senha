@@ -10,7 +10,16 @@ public class Sistema extends PanacheMongoEntity {
 
     private String nome;
     private String componente;
+    private String usuario;
     private String senha;
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 
     public String getComponente() {
         return componente;
